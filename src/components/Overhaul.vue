@@ -91,7 +91,7 @@ export default {
   name: 'Login',
   beforeCreate() {
     this.$http.get("http://localhost:8000/api/challenges/8922890/capital/wrong").then(function(response2) {
-      this.showCircle = response2.body.flag
+      this.showCircle = !response2.body.flag
       console.log(this.showCircle)
       this.$http.get("http://localhost:8000/api/challenges/8922890/capital").then(function(response) {
         this.list = response.body
