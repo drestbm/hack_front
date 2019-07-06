@@ -4,6 +4,8 @@ import Main from './components/Main.vue'
 import Water_supply from './components/Water_supply.vue'
 import Overhaul from './components/Overhaul.vue'
 import Diagram from './components/diagram.vue'
+import Diagram1 from './components/diagram1.vue'
+import Diagram2 from './components/diagram2.vue'
 
 Vue.use(Router)
 
@@ -27,6 +29,16 @@ export default new Router({
             path: '/stat',
             name: 'stat',
             component: Diagram
+        },
+        {
+            path: '/stat1',
+            name: 'stat1',
+            component: Diagram1
+        },
+        {
+            path: '/stat2',
+            name: 'stat2',
+            component: Diagram2
         },
     ]
 })

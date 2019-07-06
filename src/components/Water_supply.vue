@@ -67,11 +67,11 @@
         </div>
         <div class="right-body">
           <h3>Тип статистики</h3>
-          <select class="select">
-            <option disabled selected>Выберите категорию</option>
-            <option>По бюджету</option>
-            <option>По причине вызова</option>
-            <option>По времени работ</option>
+          <select class="select" v-model="type">
+            <option disabled selected v-model="type">Выберите категорию</option>
+            <option v-model="type" >По бюджету</option>
+            <option v-model="type" >По причине вызова</option>
+            <option v-model="type" >По времени работ</option>
           </select>
           <h3>Период статистики</h3>
           <h4 class="h4">от</h4>
@@ -92,7 +92,6 @@ export default {
   beforeCreate() {
     this.$http.get("http://localhost:8000/api/challenges/8922890/water/wrong").then(function(response2) {
       this.showCircle = response2.body.flag
-      console.log(this.showCircle)
       this.$http.get("http://localhost:8000/api/challenges/8922890/water").then(function(response) {
         this.list = response.body
       }, function(error) {
@@ -113,6 +112,7 @@ export default {
       status: "all",
       index: 0,
       showCircle: false,
+      type: "Выберите категорию",
     }
   },
   methods: {
@@ -121,7 +121,14 @@ export default {
       this.showModal=true
     },
     goStat(){
-      this.$router.push({name: "stat"})
+      if (this.type === "Выберите категорию"){
+        alert("Выберите категорию")
+      }else if (this.type === "По бюджету"){
+        this.$router.push({name: "stat"})
+      }else if (this.type === "По причине вызова"){
+        this.$router.push({name: "stat1"})
+      }else 
+        this.$router.push({name: "stat2"})
     }
   },
 }
