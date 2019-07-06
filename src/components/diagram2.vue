@@ -2,24 +2,25 @@
   <div class="Main">
     <div class="left-block">
       <div class="left-title">
-        <h1>Статистические данные2</h1>
+        <h1>Статистические данные</h1>
       </div>
       <div class="mode-list">
         <table>
           <tr>
             <td>
-              <div class="qube" style="background-color: #F22525"></div>
-            </td>
-            <td>
-              <h4 class="mode">что-то</h4>
-            </td>
-          </tr>
-          <tr>
-            <td>
               <div class="qube" style="background-color: #F2F539"></div>
             </td>
             <td>
-              <h4 class="mode">что-то</h4>
+              <h4 class="mode">1-2 часа</h4>
+            </td>
+          </tr>
+          <tr>
+          
+            <td>
+              <div class="qube" style="background-color: #F22525"></div>
+            </td>
+            <td>
+              <h4 class="mode">8-14 часов</h4>
             </td>
           </tr>
           <tr>
@@ -27,7 +28,7 @@
               <div class="qube" style="background-color: #52DD46"></div>
             </td>
             <td>
-              <h4 class="mode">что-то</h4>
+              <h4 class="mode">1-2 дня</h4>
             </td>
           </tr>
           <tr>
@@ -35,13 +36,14 @@
               <div class="qube" style="background-color: #5FC5F0"></div>
             </td>
             <td>
-              <h4 class="mode">что-то</h4>
+              <h4 class="mode">5-7 дней</h4>
             </td>
           </tr>
         </table>
       </div>
     </div>
     <div class="right-block">
+      <img class="diagram" src="@/assets/d2.png" alt="2">
     </div>
   </div>
 </template>
