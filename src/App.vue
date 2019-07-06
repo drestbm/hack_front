@@ -1,31 +1,62 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <img class="logo" src="@/assets/logo.png" @click="goMenu" alt="1">
+      <h4 class="head-main">ЖИЛСТАТ</h4>
+      <h4 class="head-sub">Сервис контроля качества услуг ЖКХ</h4>
+      <img class="ico" src="@/assets/person.png" alt="1">
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  methods: {
+    goMenu(){
+      this.$router.push({name: "main"})
+    },
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.logo{
+  width: 12%;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 100px;
 }
-#nav {
-  padding: 30px;
+.ico{
+  width: 90px;
+  position: absolute;
+  top: 15px;
+  right:150px;
+  z-index: 1000;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.head-sub{
+  font-size: 15px;
+  margin: 5px 0 10px 270px;
+  z-index: 1000;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.head-main{
+  font-size: 40px;
+  margin: 20px 0 0 270px;
+  z-index: 1000;
+}
+body{
+  font-family: 'Roboto', 'Helvetica';
+}
+.header{
+  background-color: #6D72E1;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100px;
+  color: white;
+  z-index: 500;
 }
 </style>
