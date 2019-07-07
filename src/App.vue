@@ -17,9 +17,6 @@ export default {
     goMenu(){
       this.$router.push({name: "main"})
     },
-    goWater(){
-      this.$router.push({name: "water_supply"})
-    },
   }
 }
 </script>

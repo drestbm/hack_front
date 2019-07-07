@@ -121,6 +121,9 @@ export default {
     }
   },
   methods: {
+    goMenu(){
+      this.$router.push({name: "main"})
+    },
     showPopUp(index){
       this.index=index
       this.showModal=true
