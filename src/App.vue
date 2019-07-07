@@ -38,7 +38,7 @@ export default {
 }
 .head-sub{
   font-size: 15px;
-  margin: 5px 0 10px 270px;
+  margin: 0 0 10px 270px;
   z-index: 1000;
 }
 .head-main{

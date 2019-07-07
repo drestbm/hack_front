@@ -38,6 +38,14 @@
               <h4 class="mode">Прочее</h4>
             </td>
           </tr>
+          <tr>
+            <td>
+              <a class="activate" href="#" >Скачать</a>
+            </td>
+            <td>
+              <a class="activate" href="#" >Печать</a>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
@@ -54,6 +62,17 @@ export default {
 </script>
 
 <style scoped>
+.activate{
+  margin-top: 20px;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #61A4D4;
+  height: 30px;
+  width: 120px;
+  text-align:center;
+  color: #fff;
+}
 table{
   margin-left: 100px;
 }
