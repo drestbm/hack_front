@@ -83,7 +83,7 @@
           <input class="input" id="test-field" v-model="maskedField">
           <h4 class="h4"> до</h4>
           <input class="input" id="test-field2" v-model="maskedField">
-          <a class="activate" href="#" @click="goStat">Выполнить</a>
+          <a class="activate" href="#" >Выполнить</a>
         </div>
       </div>
     </div>
@@ -148,6 +148,7 @@ export default {
   font-weight: bold;
 }
 .router{
+  z-index:9999;
   font-size: 15px;
   margin: 80px 0 0 100px;
   position: absolute;

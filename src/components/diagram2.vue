@@ -67,6 +67,9 @@
 export default {
   name: 'Login',
   methods: {
+    goMenu(){
+      this.$router.push({name: "main"})
+    },
     goWater(){
       this.$router.push({name: "water_supply"})
     },
@@ -91,6 +94,7 @@ a.point:hover{
   font-weight: bold;
 }
 .router{
+  z-index:9999;
   font-size: 15px;
   margin: 80px 0 0 100px;
   position: absolute;
