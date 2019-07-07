@@ -75,9 +75,9 @@
           </select>
           <h3>Период статистики</h3>
           <h4 class="h4">от</h4>
-          <input class="input" id="test-field" v-model="maskedField">
+          <input class="input" id="test-field">
           <h4 class="h4"> до</h4>
-          <input class="input" id="test-field2" v-model="maskedField">
+          <input class="input" id="test-field2">
           <a class="activate" href="#" @click="goStat">Выполнить</a>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default {
   name: 'Login',
   beforeCreate() {
     this.$http.get("http://localhost:8000/api/challenges/8922890/water/wrong").then(function(response2) {
-      this.showCircle = response2.body.flag
+      this.showCircle = !response2.body.flag
       this.$http.get("http://localhost:8000/api/challenges/8922890/water").then(function(response) {
         this.list = response.body
       }, function(error) {
