@@ -1,5 +1,10 @@
 <template>
   <div class="Main">
+    <div class="router">
+      <a class="point" @click="goMenu">Главное меню</a>
+      <h6 class="point"> > </h6>
+      <a class="point main-point">Водоснабжение</a>
+    </div>
     <div class="popup-cont" v-if="showModal" @click="showModal = false">
       <div class="popup">
         <h1>{{list[index].name}}</h1>
@@ -135,7 +140,27 @@ export default {
 </script>
 
 <style scoped>
-
+#app > div.Main > div.router > a:nth-child(1):hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
+.point {
+  display: inline-block;
+  margin-left: 3px;
+}
+a.point:hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
+.main-point{
+  font-weight: bold;
+}
+.router{
+  font-size: 15px;
+  margin: 80px 0 0 100px;
+  position: absolute;
+  top: 10px;
+}
 .circle{
   background-color:red;
   border-radius:100%;

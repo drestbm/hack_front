@@ -1,5 +1,12 @@
 <template>
   <div class="Main">
+    <div class="router">
+      <a class="point" @click="goMenu">Главное меню</a>
+      <h6 class="point"> > </h6>
+      <a class="point" @click="goWater">Водоснабжение</a>
+      <h6 class="point"> > </h6>
+      <a class="point main-point">Статистика по времени работ</a>
+    </div>
     <div class="left-block">
       <div class="left-title">
         <h1>Статистические данные</h1>
@@ -59,10 +66,36 @@
 <script>
 export default {
   name: 'Login',
+  methods: {
+    goWater(){
+      this.$router.push({name: "water_supply"})
+    },
+  },
 }
 </script>
 
 <style scoped>
+#app > div.Main > div.router > a:nth-child(1):hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
+.point {
+  display: inline-block;
+  margin-left: 3px;
+}
+a.point:hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
+.main-point{
+  font-weight: bold;
+}
+.router{
+  font-size: 15px;
+  margin: 80px 0 0 100px;
+  position: absolute;
+  top: 10px;
+}
 .activate{
   margin-top: 20px;
   border: 1px solid #fff;

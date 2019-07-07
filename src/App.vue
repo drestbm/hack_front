@@ -17,11 +17,18 @@ export default {
     goMenu(){
       this.$router.push({name: "main"})
     },
+    goWater(){
+      this.$router.push({name: "water_supply"})
+    },
   }
 }
 </script>
 
 <style>
+a:hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
 .logo{
   width: 12%;
   z-index: 1000;

@@ -1,5 +1,10 @@
 <template>
   <div class="Main">
+    <div class="router">
+      <a class="point" @click="goMenu">Главное меню</a>
+      <h6 class="point"> > </h6>
+      <a class="point main-point">Капитальный ремонт</a>
+    </div>
     <div class="popup-cont" v-if="showModal" @click="showModal = false">
       <div class="popup">
         <h1>{{list[index].name}}</h1>
@@ -116,6 +121,9 @@ export default {
     }
   },
   methods: {
+    goMenu(){
+      this.$router.push({name: "main"})
+    },
     showPopUp(index){
       this.index=index
       this.showModal=true
@@ -128,7 +136,23 @@ export default {
 </script>
 
 <style scoped>
-
+.point {
+  display: inline-block;
+  margin-left: 3px;
+}
+#app > div.Main > div.router > a:nth-child(1):hover{
+  cursor: pointer;
+  border-bottom: 2px dotted #28578E;
+}
+.main-point{
+  font-weight: bold;
+}
+.router{
+  font-size: 15px;
+  margin: 80px 0 0 100px;
+  position: absolute;
+  top: 10px;
+}
 .circle{
   background-color:red;
   border-radius:100%;
